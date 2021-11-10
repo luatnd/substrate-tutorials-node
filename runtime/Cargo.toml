@@ -88,6 +88,17 @@ git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-10'
 version = '4.0.0-dev'
 
+[dependencies.pallet-nicks]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'monthly-2021-10'
+version = '4.0.0-dev'
+
+[dependencies.pallet-nicks-v2]
+default-features = false
+path = '../pallets/nicks-v2'
+#version = '1.0.0'
+
 [dependencies.pallet-randomness-collective-flip]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -211,7 +222,9 @@ std = [
     'frame-system/std',
     'pallet-aura/std',
     'pallet-balances/std',
-    'pallet-grandpa/std',
+	'pallet-nicks/std',
+	'pallet-nicks-v2/std',
+	'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
     'pallet-sudo/std',
     'pallet-template/std',
