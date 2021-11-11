@@ -99,6 +99,11 @@ default-features = false
 path = '../pallets/nicks-v2'
 #version = '1.0.0'
 
+[dependencies.pallet-proof-of-existence]
+default-features = false
+path = '../pallets/proof-of-existence'
+#version = '1.0.0'
+
 [dependencies.pallet-randomness-collective-flip]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -224,6 +229,7 @@ std = [
     'pallet-balances/std',
 	'pallet-nicks/std',
 	'pallet-nicks-v2/std',
+	'pallet-proof-of-existence/std',
 	'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
     'pallet-sudo/std',

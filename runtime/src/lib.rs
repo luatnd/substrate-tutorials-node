@@ -304,6 +304,11 @@ impl pallet_nicks_v2::Config for Runtime {
 	type Event = Event;
 }
 
+// The same as pallet_template
+impl pallet_proof_of_existence::Config for Runtime {
+	type Event = Event;
+}
+
 
 parameter_types! {
 	pub const ExistentialDeposit: u128 = 500;
@@ -362,6 +367,7 @@ construct_runtime!(
 		/*** Add This Line ***/
     	Nicks: pallet_nicks::{Pallet, Call, Storage, Event<T>},
     	NicksV2: pallet_nicks_v2::{Pallet, Call, Storage, Event<T>},
+    	ProofOfExistence: pallet_proof_of_existence::{Pallet, Call, Storage, Event<T>},
 
 		TransactionPayment: pallet_transaction_payment::{Pallet, Storage},
 		Sudo: pallet_sudo::{Pallet, Call, Config<T>, Storage, Event<T>},

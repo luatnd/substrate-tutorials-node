@@ -3554,6 +3554,7 @@ dependencies = [
  "pallet-grandpa",
  "pallet-nicks",
  "pallet-nicks-v2",
+ "pallet-proof-of-existence",
  "pallet-randomness-collective-flip",
  "pallet-sudo",
  "pallet-template",
@@ -3816,6 +3817,21 @@ dependencies = [
  "frame-support",
  "frame-system",
  "pallet-balances",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-proof-of-existence"
+version = "0.0.1"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
  "parity-scale-codec",
  "scale-info",
  "sp-core",
