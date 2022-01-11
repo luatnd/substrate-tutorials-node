@@ -17,6 +17,10 @@ features = ['derive']
 package = 'parity-scale-codec'
 version = '2.0.0'
 
+#[dependencies.serde]
+#features = ["derive"]
+#version = "1.0"
+
 [dependencies.frame-benchmarking]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -53,7 +57,7 @@ git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-10'
 version = '4.0.0-dev'
 
-[dev-dependencies.sp-io]
+[dependencies.sp-io]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
 tag = 'monthly-2021-10'

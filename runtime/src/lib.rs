@@ -307,6 +307,7 @@ impl pallet_nicks_v2::Config for Runtime {
 // The same as pallet_template
 impl pallet_proof_of_existence::Config for Runtime {
 	type Event = Event;
+	type PoeRandomness = RandomnessCollectiveFlip;
 }
 
 
@@ -367,6 +368,7 @@ construct_runtime!(
 		/*** Add This Line ***/
     	Nicks: pallet_nicks::{Pallet, Call, Storage, Event<T>},
     	NicksV2: pallet_nicks_v2::{Pallet, Call, Storage, Event<T>},
+    	// Pos: pallet_pos::{Pallet, Call, Storage, Event<T>},
     	ProofOfExistence: pallet_proof_of_existence::{Pallet, Call, Storage, Event<T>},
 
 		TransactionPayment: pallet_transaction_payment::{Pallet, Storage},
